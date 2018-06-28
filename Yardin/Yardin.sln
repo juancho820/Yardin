@@ -1,19 +1,32 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yardin", "Assembly-CSharp.csproj", "{E4BD2B87-ABA2-D769-3490-5A13C845C811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yardin", "Assembly-CSharp-firstpass.csproj", "{DBB8D5F0-3930-4FC2-5FA9-3D18DB857A95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yardin", "Assembly-CSharp-Editor-firstpass.csproj", "{1549C5DC-61E4-6089-C0C5-99A75DEE9038}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{E4BD2B87-ABA2-D769-3490-5A13C845C811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BD2B87-ABA2-D769-3490-5A13C845C811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BD2B87-ABA2-D769-3490-5A13C845C811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BD2B87-ABA2-D769-3490-5A13C845C811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB8D5F0-3930-4FC2-5FA9-3D18DB857A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB8D5F0-3930-4FC2-5FA9-3D18DB857A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB8D5F0-3930-4FC2-5FA9-3D18DB857A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB8D5F0-3930-4FC2-5FA9-3D18DB857A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1549C5DC-61E4-6089-C0C5-99A75DEE9038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1549C5DC-61E4-6089-C0C5-99A75DEE9038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1549C5DC-61E4-6089-C0C5-99A75DEE9038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1549C5DC-61E4-6089-C0C5-99A75DEE9038}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
