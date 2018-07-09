@@ -4,42 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DragDrop : MonoBehaviour {
-
-    private Color mouseOverColor = Color.blue;
-    private Color originalColor = Color.yellow;
-    private bool dragging = false;
-    private float distance;
-
-
-    void OnMouseEnter()
+    public void Drag()
     {
-        Debug.Log("entro");
-        GetComponent<Image>().material.color = mouseOverColor;
+        GameObject.Find("image").transform.position = Input.mousePosition;
+        print("we are dragging the mouse");
     }
 
-    void OnMouseExit()
+    public void Drop()
     {
-        GetComponent<Image>().material.color = originalColor;
-    }
+        GameObject ph1 = GameObject.Find("BTN_GoToShip");
+        GameObject ph2 = GameObject.Find("BTN_Explore");
+        GameObject ph3 = GameObject.Find("BTN_Structure");
+        GameObject ph4 = GameObject.Find("BTN_ScavengeForage");
 
-    void OnMouseDown()
-    {
-        distance = Vector3.Distance(GetComponent<RectTransform>().pivot, Camera.main.transform.position);
-        dragging = true;
-    }
+        float distance = Vector3.Distance(GameObject.Find("image").transform.position, ph1.transform.position);
+        float distance2 = Vector3.Distance(GameObject.Find("image").transform.position, ph2.transform.position);
+        float distance3 = Vector3.Distance(GameObject.Find("image").transform.position, ph3.transform.position);
+        float distance4 = Vector3.Distance(GameObject.Find("image").transform.position, ph4.transform.position);
 
-    void OnMouseUp()
-    {
-        dragging = false;
-    }
-
-    void Update()
-    {
-        if (dragging)
+        if (distance < 150)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 rayPoint = ray.GetPoint(distance);
-            GetComponent<RectTransform>().pivot = rayPoint;
+            GameObject.Find("image").transform.position = ph1.transform.position;
+        }
+        if (distance2 < 150)
+        {
+            GameObject.Find("image").transform.position = ph2.transform.position;
+        }
+        if (distance3 < 150)
+        {
+            GameObject.Find("image").transform.position = ph3.transform.position;
+        }
+        if (distance4 < 150)
+        {
+            GameObject.Find("image").transform.position = ph4.transform.position;
         }
     }
 }
