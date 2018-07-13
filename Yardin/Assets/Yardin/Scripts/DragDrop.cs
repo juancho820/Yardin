@@ -4,39 +4,50 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DragDrop : MonoBehaviour {
+    #region Declarations
+
+    [Header("Botones")]
+    public GameObject btnGotoShip;
+    public GameObject btnExplore;
+    public GameObject btnBuildings;
+    public GameObject btnForaje;
+    [Header("Character")]
+    public GameObject characterCards;
+    #endregion
     public void Drag()
     {
-        GameObject.Find("image").transform.position = Input.mousePosition;
-        print("we are dragging the mouse");
+        characterCards.transform.position = Input.mousePosition;
     }
 
     public void Drop()
     {
-        GameObject ph1 = GameObject.Find("BTN_GoToShip");
-        GameObject ph2 = GameObject.Find("BTN_Explore");
-        GameObject ph3 = GameObject.Find("BTN_Structure");
-        GameObject ph4 = GameObject.Find("BTN_ScavengeForage");
 
-        float distance = Vector3.Distance(GameObject.Find("image").transform.position, ph1.transform.position);
-        float distance2 = Vector3.Distance(GameObject.Find("image").transform.position, ph2.transform.position);
-        float distance3 = Vector3.Distance(GameObject.Find("image").transform.position, ph3.transform.position);
-        float distance4 = Vector3.Distance(GameObject.Find("image").transform.position, ph4.transform.position);
+        float distance = Vector3.Distance(characterCards.transform.position, btnGotoShip.transform.position);
+        float distance2 = Vector3.Distance(characterCards.transform.position, btnExplore.transform.position);
+        float distance3 = Vector3.Distance(characterCards.transform.position, btnBuildings.transform.position);
+        float distance4 = Vector3.Distance(characterCards.transform.position, btnForaje.transform.position);
 
+        #region GoToShip
         if (distance < 150)
-        {
-            GameObject.Find("image").transform.position = ph1.transform.position;
-        }
+            characterCards.transform.position = btnGotoShip.transform.position;
+        #endregion
+
+        #region Explore
         if (distance2 < 150)
-        {
-            GameObject.Find("image").transform.position = ph2.transform.position;
-        }
+            characterCards.transform.position = btnExplore.transform.position;
+        #endregion
+
+        #region Buildings
         if (distance3 < 150)
-        {
-            GameObject.Find("image").transform.position = ph3.transform.position;
-        }
+            characterCards.transform.position = btnBuildings.transform.position;
+        #endregion
+
+        #region Foraje
         if (distance4 < 150)
-        {
-            GameObject.Find("image").transform.position = ph4.transform.position;
-        }
+            characterCards.transform.position = btnForaje.transform.position;
+        #endregion
+
+        if(distance>150 && distance2>150 && distance3 > 150 && distance4 > 150)
+            characterCards.transform.localPosition = Vector3.zero;
     }
 }
