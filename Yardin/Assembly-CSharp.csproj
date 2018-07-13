@@ -53,8 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Yardin\Scripts\BaseCharacter.cs" />
      <Compile Include="Assets\Yardin\Scripts\Chest.cs" />
      <Compile Include="Assets\Yardin\Scripts\DragDrop.cs" />
+     <Compile Include="Assets\Yardin\Scripts\TurnBasedCombatStateMachine.cs" />
      <Compile Include="Assets\Yardin\Scripts\YardinGameManager.cs" />
      <Compile Include="Assets\Yardin\Scripts\YardinKeys.cs" />
  <Reference Include="UnityEditor.StandardEvents">

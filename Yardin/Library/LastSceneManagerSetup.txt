@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Yardin/Scenes/MainScene.unity
+- path: Assets/Yardin/Scenes/Fight.unity
   isLoaded: 1
   isActive: 1
