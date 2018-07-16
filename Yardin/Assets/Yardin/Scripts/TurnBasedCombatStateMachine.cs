@@ -13,6 +13,12 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         WIN
     }
 
+    public int numeroAlly;
+    public int numeroEnemy;
+
+    public GameObject ally, enemy;
+
+
     private BattleStates currentState;
 
 	// Use this for initialization
@@ -25,6 +31,16 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         switch (currentState)
         {
             case (BattleStates.START):
+                for (int i = 0; i < numeroAlly; i++)
+                {
+                    Transform child = ally.transform.GetChild(i);
+                    child.gameObject.SetActive(true);
+                }
+                for (int i = 0; i < numeroEnemy; i++)
+                {
+                    Transform child = enemy.transform.GetChild(i);
+                    child.gameObject.SetActive(true);
+                }
                 break;
             case (BattleStates.PLAYERCHOICE):
                 break;
