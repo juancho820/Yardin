@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
@@ -52,4 +53,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
                 break;
         }
 	}
+    public void Escape()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }
