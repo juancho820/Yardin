@@ -5,6 +5,12 @@ namespace Yardin
 {
     public class YardinGameManager : MonoBehaviour
     {
+        private int comida;
+        private int madera;
+        private int piedra;
+        private int cuerda;
+        private int metal;
+        private int carbon;
 
         public Animator UI;
         private bool showed;
